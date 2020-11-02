@@ -79,7 +79,9 @@ public class Principal
 				base2.put(7, 8);
 				base2.put(8, 7);
 				base2.put(9, 5);
-				base2.put(10, 2);	
+				base2.put(10, 2);
+				base2.put(11, 1);
+				base2.put(12, 0);
 			}
 	 	}
 

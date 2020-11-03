@@ -23,9 +23,9 @@ public class Squad  {
 		this.pontuacao += pontuacao;
 		//this.pontuacao += 2*n;
 	}
-	public void atualizar (int pont, int n_abates) {
+	public void atualizar (int pont, int n_abates, int v_abates) {
 		this.pontuacao += pont;
-		this.pontuacao += 2*n_abates;
+		this.pontuacao += v_abates*n_abates;
 	}
 	
 }

@@ -17,24 +17,7 @@ public class Principal
 		s.setName_squad(nome);
 		s.setPontuacao(pontos);
 		tabela.add(s);
-	}
-	public static void addpontos (int pont, int n_abates, int index) 
-	{
-		tabela.get(index).atualizar(pont, n_abates);
-	}
-	public static void mostrarTabela () 
-	{
-		
-		int i = 1;
-		for (Squad g : tabela) 
-		{
-			System.out.println (i+"º "+ g.getName_squad() + " - - - - - - - - - - - - - - - Pontos:" + g.getPontuacao());
-			i++;
-		}
-	}
-	
-	
-	
+	}	
 	
 	public static void main (String [] args)  
 	{

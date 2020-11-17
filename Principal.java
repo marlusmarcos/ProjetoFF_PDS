@@ -114,6 +114,21 @@ public class Principal
 					i++;
 				}
 			}
-	 	}
+	 		try {
+				FileOutputStream arqtt = new FileOutputStream("arq.txt");
+				PrintWriter pr = new PrintWriter(arqtt);
+				
+				for (Squad g : tabela) 
+				{
+					pr.println(g.getName_squad()+ ";" + g.getPontuacao());
+				}
+				pr.close();
+				arqtt.close();
+			
+				
+			} catch (Exception e) {
+				System.out.println("Erro ao gravar");
+			};	
+	}
 
 }

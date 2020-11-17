@@ -104,7 +104,7 @@ public class Principal
 				base2.put(12, 0);
 				while (i < 12) 
 				{
-					System.out.println("informe a posição do squad: " + tabela.get(i).getName_squad()); 
+					System.out.println("informe a posição do squad e o número de abates, respectivamente: " + tabela.get(i).getName_squad()); 
 					//receber o numero de abates e a posição
 					Scanner ler3 = new Scanner(System.in);
 					a1 = ler3.nextInt();

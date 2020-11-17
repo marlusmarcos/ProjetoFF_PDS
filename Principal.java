@@ -20,12 +20,45 @@ public class Principal
 	}
 	public static void addpontos (int pont, int n_abates, int index) 
 	{
-		tabela.get(index).atualizar(pont, n_abates);
+		tabela.get(index).atualizar(pont, n_abates, 2);
 	}
-	
+	public static void mostrarTabela () 
+	{
+		
+		int i = 1;
+		for (Squad g : tabela) 
+		{
+			System.out.println (i+"º "+ g.getName_squad() + " - - - - - - - - - - - - - - - Pontos:" + g.getPontuacao());
+			i++;
+		}
+	}
 	public static void main (String [] args)  
 	{
-	
+		/*Ainda falta colocar uma tomada de decisão
+		Caso o adm queira carregar uma existente, ler o arquivo.		
+		*/
+		try 
+		{
+			FileInputStream arquivo = new FileInputStream("arq.txt");
+			InputStreamReader input = new InputStreamReader(arquivo);
+			BufferedReader br = new BufferedReader(input);
+			String linha;
+			do 
+			{
+				linha = br.readLine();
+				if (linha != null) 
+				{
+					String [] textSep = linha.split(";");
+					int pnt = Integer.parseInt(textSep[1]);
+					//Integer a = Integer.valueOf(pnt);
+					addtime(textSep[0], pnt);				
+				}
+			
+			} while(linha != null);
+	} catch (Exception e) 
+		{
+		System.out.print("erro \n");
+		}
 		
 		Principal p = new Principal();
 		int a1; //valor que vai ser recebido atraves da chave

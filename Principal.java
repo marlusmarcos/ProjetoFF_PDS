@@ -17,7 +17,11 @@ public class Principal
 		s.setName_squad(nome);
 		s.setPontuacao(pontos);
 		tabela.add(s);
-	}	
+	}
+	public static void addpontos (int pont, int n_abates, int index) 
+	{
+		tabela.get(index).atualizar(pont, n_abates);
+	}
 	
 	public static void main (String [] args)  
 	{
@@ -65,6 +69,17 @@ public class Principal
 				base2.put(10, 2);
 				base2.put(11, 1);
 				base2.put(12, 0);
+				while (i < 12) 
+				{
+					System.out.println("informe a posição do squad: " + tabela.get(i).getName_squad()); 
+					//receber o numero de abates e a posição
+					Scanner ler3 = new Scanner(System.in);
+					a1 = ler3.nextInt();
+					a2 = ler3.nextInt();		
+					a1 = base2.get(a1);
+					addpontos(a1,a2,i);
+					i++;
+				}
 			}
 	 	}
 

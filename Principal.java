@@ -88,6 +88,11 @@ public class Principal
 					addtime (nameOfSquad,abates,points);
 				}
 			}
+			if (entrada == 2) 
+			{
+				Collections.sort(tabela);
+				mostrarTabela();
+			}
 			if (entrada == 1) 
       			{
 				base2.put(1, 20);

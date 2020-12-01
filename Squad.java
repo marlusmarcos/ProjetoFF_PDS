@@ -1,5 +1,5 @@
 
-public class Squad  {
+public class Squad implements  java.lang.Comparable<Squad> {
 
 	private String name_squad;
 	private int n_abates;
@@ -26,6 +26,15 @@ public class Squad  {
 	public void atualizar (int pont, int n_abates, int v_abates) {
 		this.pontuacao += pont;
 		this.pontuacao += v_abates*n_abates;
+	}
+	public int compareTo(Squad o) {
+		if(this.pontuacao < o.pontuacao) {
+			return 1;
+		}
+		if (pontuacao > o.pontuacao) {
+			return -1;
+		}
+		return 0;
 	}
 	
 }
